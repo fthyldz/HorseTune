@@ -1,0 +1,6 @@
+﻿services:
+  presentation.api:
+    image: presentation.api
+    build:
+      context: .
+      dockerfile: Presentation.API/Dockerfile
