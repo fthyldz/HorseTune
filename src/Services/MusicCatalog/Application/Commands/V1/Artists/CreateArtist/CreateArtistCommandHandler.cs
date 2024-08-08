@@ -22,9 +22,9 @@ public class CreateArtistCommandHandler(IUnitOfWork unitOfWork, IMapper mapper) 
         
             await artistRepository.AddAsync(artist, cancellationToken);
             
-            var genres = await genreRepository.GetAllAsync(cancellationToken);
+            /*var genres = await genreRepository.GetAllAsync(cancellationToken);
             
-            artist.AddGenre(genres.Select(g => g.Id).FirstOrDefault());
+            artist.AddGenre(genres.Select(g => g.Id).FirstOrDefault());*/
 
             var album = new Album(new AlbumId(Guid.NewGuid()), "Deneme Albüm", 2014);
             

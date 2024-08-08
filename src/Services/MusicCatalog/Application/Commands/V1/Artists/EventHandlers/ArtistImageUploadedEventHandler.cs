@@ -8,6 +8,6 @@ public class ArtistImageUploadedEventHandler(IMessageBus messageBus) : INotifica
 {
     public async Task Handle(ArtistImageUploadedEvent notification, CancellationToken cancellationToken)
     {
-        await messageBus.PublishAsync(notification);
+        await messageBus.PublishAsync(notification, cancellationToken);
     }
 }
